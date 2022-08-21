@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hand-history/static/css/main.073c9b0a.css",
+    "main.js": "/hand-history/static/js/main.5bfd5572.js",
+    "static/js/787.70ee0c13.chunk.js": "/hand-history/static/js/787.70ee0c13.chunk.js",
+    "index.html": "/hand-history/index.html",
+    "main.073c9b0a.css.map": "/hand-history/static/css/main.073c9b0a.css.map",
+    "main.5bfd5572.js.map": "/hand-history/static/js/main.5bfd5572.js.map",
+    "787.70ee0c13.chunk.js.map": "/hand-history/static/js/787.70ee0c13.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.5bfd5572.js"
+  ]
+}
