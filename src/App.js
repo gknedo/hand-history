@@ -1,6 +1,6 @@
 import './App.css';
 import { Button, TextField, Typography } from '@mui/material';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const defaultData = {
   gameExtra: [{bigblind: 1}],
@@ -52,6 +52,8 @@ function App() {
 
   const {name, playerCount, mttCurBlindLevel, mttprizecount} = data.matchExtra
   const handleClick = async (handURL) => {
+    if(!handURL || handURL.length === 0) return;
+    console.log(handURL);
     setIsLoading(true);
 
     try {
@@ -74,18 +76,21 @@ function App() {
   };
 
   return (
-    <div>
-      <Typography variant="h1">
+    <div className='main_body'>
+      <Typography variant="h2">
         Suprema Hand History
       </Typography>
-      <TextField
-        id="url-text"
-        label="Hand Url"
-        value={currentUrl}
-        onChange={(e) => setCurrentUrl(e.target.value)}
-      />
-      <Button variant="contained" onClick={() => handleClick(currentUrl)}>Analyze</Button>
+      <div className='action_bar'>
+        <TextField
+          id="url-text"
+          label="Hand Url"
+          value={currentUrl}
+          onChange={(e) => setCurrentUrl(e.target.value)}
+          fullWidth
+        />
+        <Button variant="contained" onClick={() => handleClick(currentUrl)}>Analyze</Button>
 
+      </div>
       <Typography variant="body1">{name}</Typography>
       {data.gameExtra.map((event) => renderGameExtra(event, bb))}
       
