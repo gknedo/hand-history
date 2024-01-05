@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/hand-history/static/css/main.073c9b0a.css",
-    "main.js": "/hand-history/static/js/main.5bfd5572.js",
-    "static/js/787.70ee0c13.chunk.js": "/hand-history/static/js/787.70ee0c13.chunk.js",
+    "main.css": "/hand-history/static/css/main.290d4c80.chunk.css",
+    "main.js": "/hand-history/static/js/main.66e04de5.chunk.js",
+    "main.js.map": "/hand-history/static/js/main.66e04de5.chunk.js.map",
+    "runtime~main.js": "/hand-history/static/js/runtime~main.e7003f3c.js",
+    "runtime~main.js.map": "/hand-history/static/js/runtime~main.e7003f3c.js.map",
+    "static/js/2.08ec22dc.chunk.js": "/hand-history/static/js/2.08ec22dc.chunk.js",
+    "static/js/2.08ec22dc.chunk.js.map": "/hand-history/static/js/2.08ec22dc.chunk.js.map",
+    "static/js/3.110ad6b2.chunk.js": "/hand-history/static/js/3.110ad6b2.chunk.js",
+    "static/js/3.110ad6b2.chunk.js.map": "/hand-history/static/js/3.110ad6b2.chunk.js.map",
     "index.html": "/hand-history/index.html",
-    "main.073c9b0a.css.map": "/hand-history/static/css/main.073c9b0a.css.map",
-    "main.5bfd5572.js.map": "/hand-history/static/js/main.5bfd5572.js.map",
-    "787.70ee0c13.chunk.js.map": "/hand-history/static/js/787.70ee0c13.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.5bfd5572.js"
-  ]
+    "precache-manifest.7f8af6905f3a565967822cdca135616d.js": "/hand-history/precache-manifest.7f8af6905f3a565967822cdca135616d.js",
+    "service-worker.js": "/hand-history/service-worker.js",
+    "static/css/main.290d4c80.chunk.css.map": "/hand-history/static/css/main.290d4c80.chunk.css.map"
+  }
 }
