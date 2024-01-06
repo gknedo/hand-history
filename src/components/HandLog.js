@@ -1,13 +1,5 @@
-import './App.css';
-import { Button, TextField, Typography } from '@mui/material';
-import React, { useState } from 'react';
-import mockedResponse from './mocks/response.json';
-import HandLog from './components/HandLog';
-
-const defaultData = {
-  gameExtra: [{bigblind: 1}],
-  matchExtra: {},
-}
+import React from 'react';
+import { Typography } from '@mui/material';
 
 const renderStart = (smallBlind, bigBlind) => {
   return <Typography variant="body1">Blinds: {smallBlind}/{bigBlind}</Typography>
@@ -46,61 +38,18 @@ const renderGameExtra = ({e, pos, action, smallblind, bigblind, chips, coins, ca
   if(e === "nextround" ) return renderNextRound(cards, stateName, pot, bb);
 }
 
-const getResult = async (handUrl, opts = {}) => {
-  const { mocked } = opts;
-  if(mocked) return mockedResponse;
-
-  const handId = handUrl.split("t=")[1].split("&")[0].slice(0,8);
-  const response = await fetch(`https://ra.supremapoker.net/supremaAPI/replayInfo.php?s=${handId}`);
-
-  if (!response.ok) {
-    throw new Error(`Error! status: ${response.status}`);
-  }
-
-  return await response.json();
-}
-
-function App() {
-  const [currentUrl, setCurrentUrl] = useState('');
-  const [data, setData] = useState(defaultData);
-  const [isLoading, setIsLoading] = useState(false);
+function HandLog(props) {
+  const {data} = props;
   const bb = data.gameExtra[0].bigblind
 
   const {name, playerCount, mttCurBlindLevel, mttprizecount} = data.matchExtra
-  const handleClick = async (handURL) => {
-    if(!handURL || handURL.length === 0) return;
-    console.log(handURL);
-    setIsLoading(true);
-
-    try {
-      const result = await getResult(handURL, {
-        mocked: true,
-      });
-
-      setData(result);
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   return (
-    <div className='main_body'>
-      <Typography variant="h2">
-        Suprema Hand History
-      </Typography>
-      <div className='action_bar'>
-        <TextField
-          id="url-text"
-          label="Hand Url"
-          value={currentUrl}
-          onChange={(e) => setCurrentUrl(e.target.value)}
-          fullWidth
-        />
-        <Button variant="contained" onClick={() => handleClick(currentUrl)}>Analyze</Button>
-      </div>
-      <HandLog data={data}/>
+    <div>  
+      <Typography variant="body1">{name}</Typography>
+      {data.gameExtra.map((event) => renderGameExtra(event, bb))}
     </div>
   );
 }
 
-export default App;
+export default HandLog;
