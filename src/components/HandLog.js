@@ -38,16 +38,16 @@ const renderGameExtra = ({e, pos, action, smallblind, bigblind, chips, coins, ca
   if(e === "nextround" ) return renderNextRound(cards, stateName, pot, bb);
 }
 
-function HandLog(props) {
-  const {data} = props;
-  const bb = data.gameExtra[0].bigblind
+function HandLog({handData}) {
+  if(!handData) return;
 
-  const {name, playerCount, mttCurBlindLevel, mttprizecount} = data.matchExtra
+  const bb = handData.gameExtra[0].bigblind
+  const {name} = handData.matchExtra
 
   return (
     <div>  
       <Typography variant="body1">{name}</Typography>
-      {data.gameExtra.map((event) => renderGameExtra(event, bb))}
+      {handData.gameExtra.map((event) => renderGameExtra(event, bb))}
     </div>
   );
 }
