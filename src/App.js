@@ -1,6 +1,7 @@
 import './App.css';
 import { Button, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
+import mockedResponse from './mocks/response.json';
 
 const defaultData = {
   gameExtra: [{bigblind: 1}],
@@ -44,6 +45,20 @@ const renderGameExtra = ({e, pos, action, smallblind, bigblind, chips, coins, ca
   if(e === "nextround" ) return renderNextRound(cards, stateName, pot, bb);
 }
 
+const getResult = async (handUrl, opts = {}) => {
+  const { mocked } = opts;
+  if(mocked) return mockedResponse;
+
+  const handId = handUrl.split("t=")[1].split("&")[0].slice(0,8);
+  const response = await fetch(`https://ra.supremapoker.net/supremaAPI/replayInfo.php?s=${handId}`);
+
+  if (!response.ok) {
+    throw new Error(`Error! status: ${response.status}`);
+  }
+
+  return await response.json();
+}
+
 function App() {
   const [currentUrl, setCurrentUrl] = useState('');
   const [data, setData] = useState(defaultData);
@@ -57,17 +72,9 @@ function App() {
     setIsLoading(true);
 
     try {
-      const handId = currentUrl.split("t=")[1].split("&")[0].slice(0,8);
-      console.log(handId);
-      const response = await fetch(`https://ra.supremapoker.net/supremaAPI/replayInfo.php?s=${handId}`);
-
-      if (!response.ok) {
-        throw new Error(`Error! status: ${response.status}`);
-      }
-
-      const result = await response.json();
-
-      console.log('result is: ', JSON.stringify(result, null, 4));
+      const result = await getResult(handURL, {
+        mocked: true,
+      });
 
       setData(result);
     } finally {
