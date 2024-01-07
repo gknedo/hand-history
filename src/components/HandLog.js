@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography } from '@mui/material';
+import PlayingCard from './PlayingCard/PlayingCard';
 
 const renderStart = (smallBlind, bigBlind) => {
   return <Typography variant="body1">Blinds: {smallBlind}/{bigBlind}</Typography>
@@ -28,7 +29,7 @@ const renderNextRound = (cards, stateName, pot, bb) => {
     "river": "SHOWDOWN"
   }[stateName];
 
-  return <Typography variant="body1">{next} - {cards.join(" ")} - Pot {toBB(pot, bb)}</Typography>
+  return <Typography variant="body1">{next} - {cards.map((card) => <PlayingCard card={card}/>)} - Pot {toBB(pot, bb)}</Typography>
 }
 
 const renderGameExtra = ({e, pos, action, smallblind, bigblind, chips, coins, cards, stateName, pot, pattern}, bb) => {

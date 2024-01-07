@@ -20,14 +20,6 @@ function App() {
         setData={setData}
         setIsLoading={setIsLoading}
       />
-      <div>
-        <PlayingCard rank={"Q"} suit={"d"}/>
-        <PlayingCard rank={"Q"} suit={"h"}/>
-        <PlayingCard rank={"Q"} suit={"c"}/>
-        <PlayingCard card="Qs"/>
-        <PlayingCard card="Ts"/>
-        <PlayingCard card="2h"/>
-      </div>
       <HandLog handData={data}/>
     </div>
   );

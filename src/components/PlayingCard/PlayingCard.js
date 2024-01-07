@@ -1,9 +1,18 @@
 import React, { useMemo } from 'react';
 import './styles.css';
 
+const getRank = (card) => {
+  if(card[0] === "1") return "T";
+  return card[0];
+}
+const getSuit = (card) => {
+  if(card[0] === "1") return card[2];
+  return card[1];
+}
+
 function PlayingCard({rank, suit, card}) {
-  const selectedRank = !!card ? card[0] : rank;
-  const selectedSuit = !!card ? card[1] : suit;
+  const selectedRank = !!card ? getRank(card) : rank;
+  const selectedSuit = !!card ? getSuit(card) : suit;
 
   const suitStr = useMemo(() => {
     if(["clubs", "c", "♣"].includes(selectedSuit)) return "clubs";
