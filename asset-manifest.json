@@ -1,17 +1,27 @@
 {
   "files": {
-    "main.css": "/hand-history/static/css/main.290d4c80.chunk.css",
-    "main.js": "/hand-history/static/js/main.66e04de5.chunk.js",
-    "main.js.map": "/hand-history/static/js/main.66e04de5.chunk.js.map",
-    "runtime~main.js": "/hand-history/static/js/runtime~main.e7003f3c.js",
-    "runtime~main.js.map": "/hand-history/static/js/runtime~main.e7003f3c.js.map",
-    "static/js/2.08ec22dc.chunk.js": "/hand-history/static/js/2.08ec22dc.chunk.js",
-    "static/js/2.08ec22dc.chunk.js.map": "/hand-history/static/js/2.08ec22dc.chunk.js.map",
-    "static/js/3.110ad6b2.chunk.js": "/hand-history/static/js/3.110ad6b2.chunk.js",
-    "static/js/3.110ad6b2.chunk.js.map": "/hand-history/static/js/3.110ad6b2.chunk.js.map",
+    "main.css": "/hand-history/static/css/main.85750eb6.css",
+    "main.js": "/hand-history/static/js/main.41c9d727.js",
+    "static/js/787.42415c15.chunk.js": "/hand-history/static/js/787.42415c15.chunk.js",
+    "static/media/JS.gif": "/hand-history/static/media/JS.d749a1baead227c7b574.gif",
+    "static/media/KC.gif": "/hand-history/static/media/KC.454896ac2def124effbd.gif",
+    "static/media/KS.gif": "/hand-history/static/media/KS.4ad57c330b2d08622c91.gif",
+    "static/media/QH.gif": "/hand-history/static/media/QH.04c78a916a0b69e7573d.gif",
+    "static/media/QS.gif": "/hand-history/static/media/QS.3cc03c1c13d2f81c7695.gif",
+    "static/media/JC.gif": "/hand-history/static/media/JC.ca7327962155f0f8fc28.gif",
+    "static/media/KD.gif": "/hand-history/static/media/KD.7d3ac11fae1e5b059137.gif",
+    "static/media/KH.gif": "/hand-history/static/media/KH.015d38e8d389121f1535.gif",
+    "static/media/QC.gif": "/hand-history/static/media/QC.3977b68088e2febfdfbf.gif",
+    "static/media/QD.gif": "/hand-history/static/media/QD.e4920e208957930bc64b.gif",
+    "static/media/JH.gif": "/hand-history/static/media/JH.6db7ca8e93348fcedb1b.gif",
+    "static/media/JD.gif": "/hand-history/static/media/JD.196aa0f633f6513a2c24.gif",
     "index.html": "/hand-history/index.html",
-    "precache-manifest.7f8af6905f3a565967822cdca135616d.js": "/hand-history/precache-manifest.7f8af6905f3a565967822cdca135616d.js",
-    "service-worker.js": "/hand-history/service-worker.js",
-    "static/css/main.290d4c80.chunk.css.map": "/hand-history/static/css/main.290d4c80.chunk.css.map"
-  }
+    "main.85750eb6.css.map": "/hand-history/static/css/main.85750eb6.css.map",
+    "main.41c9d727.js.map": "/hand-history/static/js/main.41c9d727.js.map",
+    "787.42415c15.chunk.js.map": "/hand-history/static/js/787.42415c15.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85750eb6.css",
+    "static/js/main.41c9d727.js"
+  ]
 }
