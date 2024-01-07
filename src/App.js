@@ -3,7 +3,6 @@ import { Typography } from '@mui/material';
 import HandLog from './components/HandLog';
 import ActionBar from './components/ActionBar';
 import './App.css';
-import PlayingCard from './components/PlayingCard/PlayingCard';
 
 function App() {
   const [data, setData] = useState(false);
