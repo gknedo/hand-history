@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Typography } from '@mui/material';
+import { ToggleButton, ToggleButtonGroup, Typography } from '@mui/material';
 import HandLog from './components/HandLog';
 import ActionBar from './components/ActionBar';
 import './App.css';
+import HandViewer from './components/HandViewer';
 
 function App() {
   const [data, setData] = useState(false);
@@ -19,7 +20,8 @@ function App() {
         setData={setData}
         setIsLoading={setIsLoading}
       />
-      <HandLog handData={data}/>
+      <HandViewer handData={data}/>
+
     </div>
   );
 }
